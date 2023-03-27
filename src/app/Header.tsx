@@ -1,24 +1,23 @@
-import {
-  Box,
-  Button,
-  Flex,
-  HStack,
-  Image,
-  Stack,
-  StackProps,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
-  Text,
-} from "@chakra-ui/react";
-
-const ListItem = (props: StackProps) => {
-  const { children, ...rest } = props;
+import { Link } from "@chakra-ui/next-js";
+import { Flex, HStack, Image, StackProps } from "@chakra-ui/react";
+interface Props extends StackProps {
+  routeName: string;
+}
+const ListItem = (props: Props) => {
+  const { children, routeName, ...rest } = props;
   return (
-    <HStack as="li" {...rest}>
-      <Button>{children}</Button>
+    <HStack flex={1} as="li" {...rest}>
+      <Link
+        fontSize={[11, 13, 20]}
+        color={"black"}
+        fontWeight={"bold"}
+        textAlign={"center"}
+        flex={1}
+        href={routeName}
+        _hover={{ color: "blue.500" }}
+      >
+        {children}
+      </Link>
     </HStack>
   );
 };
@@ -32,15 +31,13 @@ const Header = () => (
     justifyContent={"space-between"}
     px={"10"}
   >
-    <Image height={"10"} width="10" src="/favicon.ico" alt="Logo" />
-    <Tabs>
-      <TabList>
-        <Tab px={"12"}>Home</Tab>
-        <Tab px={"12"}>Courses</Tab>
-        <Tab px={"12"}>About</Tab>
-        <Tab px={"12"}>Contact</Tab>
-      </TabList>
-    </Tabs>
+    <Flex flex={0.2}>
+      <Image objectFit={"contain"} src="/dao.webp" alt="Logo" />
+    </Flex>
+    <Flex justifyContent={"space-between"} maxWidth={400} flex={0.8}>
+      <ListItem routeName={"./home"}>HOME</ListItem>
+      <ListItem routeName={"./courses"}>COURSES</ListItem>
+    </Flex>
   </Flex>
 );
 export { Header };

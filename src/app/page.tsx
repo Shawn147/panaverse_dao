@@ -2,12 +2,12 @@
 
 import { Box, Text } from "@chakra-ui/react";
 import { Header } from "./Header";
-
-export default function Home() {
+import Home from "./home/page.tsx";
+export default function Page() {
   return (
     <Box>
       <Header />
-      <Text>Hello</Text>
+      <Home />
     </Box>
   );
 }
