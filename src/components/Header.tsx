@@ -10,7 +10,7 @@ const ListItem = (props: Props) => {
       <Link
         fontSize={[11, 13, 20]}
         color={"black"}
-        fontWeight={"bold"}
+        fontWeight={"medium"}
         textAlign={"center"}
         flex={1}
         href={routeName}
@@ -25,7 +25,6 @@ const Header = () => (
   <Flex
     height={"100"}
     width="100"
-    bgColor={"aliceblue"}
     direction={"row"}
     alignItems={"center"}
     justifyContent={"space-between"}
@@ -40,4 +39,4 @@ const Header = () => (
     </Flex>
   </Flex>
 );
-export { Header };
+export default Header;

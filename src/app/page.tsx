@@ -1,13 +1,31 @@
 "use client";
+import { quarters } from "@/contents";
+import { Box, Flex } from "@chakra-ui/react";
+import React from "react";
+import {
+  Header,
+  HeroPoster,
+  SpecializedTracks,
+  QuarterCard,
+  ProgramOfStudies,
+} from "@/components";
 
-import { Box, Text } from "@chakra-ui/react";
-import { Header } from "./Header";
-import Home from "./home/page.tsx";
-export default function Page() {
+const Page = () => {
   return (
-    <Box>
+    <Box px={["4", "8", "16"]}>
       <Header />
-      <Home />
+      <HeroPoster />
+      <ProgramOfStudies />
+      <Flex
+        my={"8"}
+        gap={"8"}
+        wrap={["wrap", "wrap", "nowrap"]}
+        justifyContent={"space-between"}
+      >
+        {quarters.map(QuarterCard)}
+      </Flex>
+      <SpecializedTracks />
     </Box>
   );
-}
+};
+export default Page;
