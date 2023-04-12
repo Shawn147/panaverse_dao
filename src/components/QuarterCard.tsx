@@ -6,6 +6,7 @@ const QuarterCard = (item: any, index: number) => (
     p={"8"}
     key={index.toString()}
     borderWidth={1}
+    boxShadow="sm"
     borderRadius={["md", "lg", "lg"]}
   >
     <Heading size={["xs", "sm", "md"]}>{item.quarter}</Heading>

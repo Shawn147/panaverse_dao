@@ -1,8 +1,8 @@
 "use client";
 import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 const HeroPoster = () => (
-  <Flex wrap={["wrap", "wrap", "nowrap"]}>
-    <Box flex={1} mr={["4", "8", "16"]} ml={["2", "4", "6"]}>
+  <Flex pt={"100"} wrap={["wrap", "wrap", "nowrap"]}>
+    <Box flex={1} mr={["0", "8", "20"]}>
       <Text fontSize={"md"} fontWeight={"semibold"} mt={"5"} color={"#01606B"}>
         Presendential Initiative for Artificial Intelligence and Cloud Computing
         (PIAIC)
@@ -30,11 +30,11 @@ const HeroPoster = () => (
         Enroll Now
       </Button>
     </Box>
-    <Box mx={["4", "8", "16"]}>
+    <Box mx={["0", "0", "4"]}>
       <Image
         boxSize="xl"
         objectFit={"contain"}
-        src="/heroPoster.webp"
+        src="/heroPoster.png"
         alt="Hero Poster"
       />
     </Box>

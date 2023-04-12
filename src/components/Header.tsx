@@ -24,15 +24,22 @@ const ListItem = (props: Props) => {
 const Header = () => (
   <Flex
     height={"100"}
-    width="100"
-    direction={"row"}
-    alignItems={"center"}
+    width="100%"
     justifyContent={"space-between"}
-    px={"10"}
+    px={["4", "16", "20"]}
+    bgColor={"rgba(255,255,255,0.5)"}
+    as="header"
+    position="fixed"
+    backgroundColor="rgba(255, 255, 255, 0.8)"
+    backdropFilter="saturate(180%) blur(5px)"
   >
-    <Flex flex={0.2}>
-      <Image objectFit={"contain"} src="/dao.webp" alt="Logo" />
-    </Flex>
+    <Image
+      height={"100%"}
+      width={"28"}
+      objectFit={"contain"}
+      src="/dao.webp"
+      alt="Logo"
+    />
     <Flex justifyContent={"space-between"} maxWidth={400} flex={0.8}>
       <ListItem routeName={"./home"}>HOME</ListItem>
       <ListItem routeName={"./courses"}>COURSES</ListItem>

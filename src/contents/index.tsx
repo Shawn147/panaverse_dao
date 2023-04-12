@@ -26,5 +26,31 @@ const quarter45: { quarter: string; description: string }[] = [
       "MV-361: Developing Planet-Scale Open Virtual and Augmented Metaverse Experiences",
   },
 ];
+const courses: { title: string; img: string }[] = [
+  {
+    title: "Web 3.0 (Blockchain) and Metaverse Specialization",
+    img: "./blckMeta.jpeg",
+  },
+  {
+    title: "Artificial Intelligence (AI) and Deep Learning Specialization",
+    img: "./deep.jpeg",
+  },
+  {
+    title: "Cloud-Native Computing Specialization",
+    img: "./cnc.jpeg",
+  },
+  {
+    title: "Ambient Computing and IoT Specialization",
+    img: "./iot.jpeg",
+  },
+  {
+    title: "Genomics and Bioinformatics Specialization",
+    img: "./bio.jpeg",
+  },
+  {
+    title: "Network Programmability and Automation Specialization",
+    img: "./net.jpeg",
+  },
+];
 
-export { quarters, quarter45 };
+export { quarters, quarter45, courses };

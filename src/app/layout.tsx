@@ -11,9 +11,10 @@ export default function RootLayout({
 }) {
   const colors = {
     primary: {
-      900: "#1a365d",
+      900: "#202F39",
       800: "#153e75",
       700: "#01606B",
+      200: "#D0D4D9",
       100: "#FFFFFF",
     },
   };
